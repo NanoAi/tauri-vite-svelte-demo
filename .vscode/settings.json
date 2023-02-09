@@ -1,0 +1,57 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.pcss": "scss"
+  },
+  "files.insertFinalNewline": true,
+  "scss.lint.unknownAtRules": "ignore",
+  "vsicons.associations.files": [
+    { "icon": "postcss", "extensions": ["pcss"], "format": "svg" }
+  ],
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html",
+    "svelte": "html"
+  },
+  "editor.indentSize": 2,
+  "editor.formatOnPaste": false,
+  "editor.rulers": [80],
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "workbench.colorCustomizations": {
+    // "statusBar.background" : "#7413c9"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "windicss.sortOnSave": true,
+  "stylelint.enable": true,
+  "stylelint.validate": ["css", "less", "pcss", "scss"],
+  "stylelint.config": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-prettier",
+      "stylelint-config-tailwindcss"
+    ],
+    "overrides": [
+      {
+        "files": ["**/*.pcss", "**/*.scss"],
+        "customSyntax": "postcss-scss"
+      }
+    ]
+  },
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "emmet.includeLanguages": {
+    "svelte": "html"
+  },
+  "tailwindCSS.lint.cssConflict": "error"
+}

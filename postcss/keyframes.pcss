@@ -1,0 +1,85 @@
+@keyframes flip {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    max-width: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    max-width: 100%;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+.transit {
+  overflow: hidden;
+
+  &.out {
+    opacity: 1;
+    transform: scaleX(1);
+    animation: flip 100ms linear 0ms 1 forwards;
+    animation-direction: reverse;
+  }
+
+  &.in {
+    opacity: 0;
+    transform: scaleX(0);
+    animation: flip 100ms linear 0ms 1 forwards;
+  }
+
+  &.load-in {
+    &::after {
+      content: " ";
+      z-index: 52;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 0.5rem;
+      background-color: #535bf2;
+      animation: slide 100ms linear 0ms 1 forwards;
+    }
+  }
+}
